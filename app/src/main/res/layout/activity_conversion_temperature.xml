@@ -1,10 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ConversionTemperature">
+    android:orientation="vertical"
+    android:padding="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/edit_temp_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Température"
+        android:inputType="numberDecimal" />
+
+    <RadioGroup
+        android:id="@+id/radio_group_temp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_c_to_f"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C → F" />
+
+        <RadioButton
+            android:id="@+id/radio_f_to_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="F → C" />
+    </RadioGroup>
+
+    <Button
+        android:onClick="convertTemperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Convertir" />
+
+    <TextView
+        android:id="@+id/text_temp_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Résultat"
+        android:textSize="18sp"
+        android:paddingTop="16dp"/>
+</LinearLayout>
