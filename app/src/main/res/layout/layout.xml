@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Application de Conversion"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"/>
+
+    <RadioGroup
+        android:id="@+id/radio_group_conversion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <RadioButton
+            android:id="@+id/radio_euro_to_dinar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Euro → Dinar"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/radio_dinar_to_euro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dinar → Euro"/>
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Entrez la valeur à convertir:"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/edit_input_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="Valeur"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Convertir"
+        android:onClick="@string/auClic"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Résultat:"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/text_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:hint="Résultat de la conversion"
+        android:background="#EEEEEE"
+        android:padding="8dp"/>
+
+</LinearLayout>
